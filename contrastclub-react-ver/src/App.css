@@ -1,60 +1,55 @@
+/* HEADER */
+
 a {
   color: rgb(17, 17, 17);
+  text-decoration: none;
 }
 
 .header-container {
   display: grid;
-  grid-template-columns: 30% 70%; /* Logo takes auto width, horizontal line takes remaining space */
-  align-items: center; /* Center items vertically */
-  margin: 2% 3%;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center; /* Center logo vertically */
+  grid-template-columns: 25% 75%;
+  align-items: center; 
+  margin: 2% 4%;
 }
 
 .logo {
-  width: 80%; /* Set width as needed */
-  margin-right: 1%; /* Add margin between logo and line */
+  width: 80%;
 }
 
 .horizontal-line {
-  border-top: 1px solid grey; /* Horizontal line style */
-  grid-column: 2; /* Take up the second grid column */
+  border-top: 1px solid grey;
+  grid-column: 2;
 }
 
 
-
-
+/* HOME PAGE */
 
 .toppage-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 90% 10%;
-  padding-left: 5%;
-  padding-right: 3%;
-  margin-bottom: 5%;
-  margin-top: 3%;
+  padding: 0 4%;
+  margin-bottom: 8%;
+  margin-top: 2%;
 }
 
 .col-title {
-  justify-self: flex-start;
   align-self: end;
   grid-row: 1 / span 2;
   font-family: 'Lora';
   letter-spacing: 0.1em;
-  width: 70%;
-  font-size: 1.2em;
+  width: 100%;
+  font-size: 2.5em;
   padding-bottom: 4%;
 }
 
 .contact {
-  font-size: 0.4em;
+  font-size: 0.41em;
   font-family: 'Open Sans';
-  letter-spacing: 0.13em;
+  letter-spacing: 0.14em;
   font-weight: 400;
-  margin-top: 1.5%;
+  margin-top: 1.3%;
+  margin-bottom: 3.5%;
 }
 
 .emailTag {
@@ -62,29 +57,23 @@ a {
   font-family: 'Open Sans';
   font-weight: bold;
   margin-top: -3%;
-  letter-spacing: 0.21em;
-}
-
-.website-link a {
-  text-decoration: none;
+  letter-spacing: 0.17em;
 }
 
 .collections-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1em;
+  gap: 0.8em;
 }
 
 .website-link {
   grid-column: 1 / span 2;
   justify-self: flex-end;
-  margin-right: 1.2%;
-  margin-top: 1.2%;
+  margin-right: 10vw;
   font-family: 'Open Sans';
-  font-size: 0.8em;
-  padding: 1.5% 5%;
-  margin-top: 1%;
+  font-size: 1em;
+  padding: 1% 3%;
   background: none;
   border: 0.5px solid rgb(188, 188, 188);
 }
@@ -97,48 +86,38 @@ a {
 .home-imgs {
   width: 100%; 
   max-height: 28vh;
-  display: block; 
   object-fit: cover;
+  object-position: 60% 30%;
+  margin-bottom: -1%;
 }
 
-
-.mock-img:hover {
+.home-imgs:hover {
   opacity: 80%;
-}
-
-
-.collection-img-title {
-  padding: 0 5%;
-  padding-right: 0;
-  text-decoration: underline;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .col-names {
   font-family: 'Open Sans';
   font-size: 1.2vw;
   font-weight: 400;
+  text-decoration: underline;
 }
 
 
-
+/* PRODUCT PAGES */
 
 .productpage-container {
   display: grid;
   grid-template-columns: 40% 25% 35%;
   padding: 3% 4.6%;
   gap: 1vw;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+  margin-top: -2%;
 }
 
 .coll-mock-img {
   width: 22vw;
-  object-fit: contain;
-  align-self: start;
-}
 
-.product-video {
-  max-width: 100%;
-  height: auto;
 }
 
 .product-video video {
@@ -151,15 +130,12 @@ a {
   text-align: right;
   font-family: 'Open Sans';
   max-width: 90%; 
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
+  margin-right: 4%;
 }
 
 .coll-title {
   font-size: 1.2vw;
   font-weight: 600;
-  margin: 0;
   line-height: 1.5vw;
   letter-spacing: 0.1em;
 }
@@ -179,20 +155,14 @@ a {
   padding-left: 40%;
 }
 
-.product-header {
-  display: flex;
-  justify-content: 'space-around';
-  margin-right: 3%;
-}
-
 .arrow-container {
   display: flex;
   gap: 1%;
   font-family:'Open Sans';
   justify-content: end;
-  margin-right: 3%;
+  margin-right: 4%;
   align-items: center;
-  margin-top: -15px;
+  margin-top: -1.5vw;
   color:rgb(176, 175, 175);
 } 
 
@@ -201,15 +171,149 @@ a {
   height: auto;
 }
 
+.arrow-container:hover {
+  color:rgb(109, 105, 105);
+}
+
 .back_text {
-  font-size: 130%;
+  font-size: 120%;
 }
 
-.back_text a {
-  text-decoration: none;
-}
 
-a {
-  text-decoration: none;
-}
+/* RESPONSIVENESS */
 
+@media all and (max-width: 600px) {
+
+  a {
+    text-decoration: none;
+  }
+
+  .header-container {
+    grid-template-columns: 60% 40%;
+    align-items: center; 
+    margin: 2% 4%;
+  }
+
+  .logo {
+      width: 90%; 
+      padding: 2.6% 5% 0 0;
+   }
+  
+   .line {
+       padding: 0% 5% 1% 0;
+   }
+   
+
+  /* MAIN PAGE */
+
+   .toppage-container {
+       grid-template-columns: 1fr;
+       grid-template-rows: 20% 75% 5%;
+       gap: 0.3%;
+       margin: 0 3.2%;
+       margin-bottom: 2rem;
+   }
+   
+   .col-title {
+      grid-row: 1 / span 1;
+   }
+   
+   .contact {
+       letter-spacing: 0.11em;
+       margin-top: 5%;
+       margin-bottom: 7%;
+       white-space: nowrap;
+   }
+   
+   .emailTag {
+       font-size: 0.4em;
+       margin-top: -7%;
+       letter-spacing: 0.2em;
+   }
+   
+   .collections-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+       margin-bottom: 4%;
+   }
+   
+   .website-link {
+       grid-column: 1 / span 1;
+       grid-row: 4 / span 1;
+       margin-top: 2%;
+   }
+
+   .col-names {
+       font-size: 4vw;
+       margin-bottom: 7%;
+   }
+
+   .empty-space {
+    height: 3.5rem;
+   }
+
+
+  /* PRODUCT PAGES */
+  
+  .productpage-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40% 25% 35%;
+  }
+
+  .product-video {
+      grid-column: 1 / span 2;
+  }
+
+  .product-img {
+      grid-column: 2;
+      margin-top: 10%;
+  }
+
+  .coll-mock-img {
+      width: 60vw;
+  }
+
+  .product-details {
+      align-self: start;
+      max-width: 100%; 
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      margin-top: 15%;
+  }
+
+  .coll-title {   
+      font-size: 4.2vw;
+      line-height: 4vw;
+      letter-spacing: 0.5;
+  }
+  
+  .item-description {
+      font-size: 3.5vw;
+      margin-top: 3%;
+      margin-bottom: 0;
+  }
+  
+  .item-material-one {
+      font-size: 3vw;
+  }
+  
+  .item-material-two {
+      font-size: 3vw;
+  }
+  
+  .backarrow {
+      max-width: 21px;
+      height: auto;
+  }
+  
+  .back_text {
+      font-size: 80%;
+  }
+
+  .arrow-container {
+      margin-top: -10px;
+  } 
+
+}
