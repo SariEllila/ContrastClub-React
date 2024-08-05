@@ -10,7 +10,7 @@ export default function ProductPages({ productId, onBack }) {
     <div>
       {/* Back arrow to home page */}
       <div className="arrow-container" onClick={onBack}>
-        <img className="backarrow" src="https://thecontrastclub.com/wp-content/uploads/2024/01/arrow-leftpng.png" alt="back arrow"/>
+        <img className="backarrow" src="https://archived.thecontrastclub.com/wp-content/uploads/2024/01/arrow-leftpng.png" alt="back arrow"/>
         <h4 className="back_text">BACK</h4>
       </div>
       {/* Container for the video, image and details of product */}

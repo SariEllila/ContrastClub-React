@@ -6,7 +6,7 @@ export default function Header() {
         <div className="header-container">
             <div className="logo-container">
                 <a href="https://thecontrastclub.com">
-                    <img src="https://thecontrastclub.com/wp-content/uploads/2024/01/PNG800transparent.png" className="logo" alt="Contrast Club company logo" />
+                    <img src="https://archived.thecontrastclub.com/wp-content/uploads/2024/01/PNG800transparent.png" className="logo" alt="Contrast Club company logo" />
                 </a>
             </div>
                 <div className="horizontal-line"></div>
